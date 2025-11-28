@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Phishing Detection Helper</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="top-bar">
+        <div class="logo-text">Phishing Guard</div>
+        <nav class="nav-links">
+            <a href="#what-is-phishing">What is Phishing?</a>
+            <a href="#checker">Check Message/URL</a>
+            <a href="#tips">Safety Tips</a>
+        </nav>
+    </header>
+
+    <main class="page">
+        <!-- Intro section -->
+        <section class="hero">
+            <div class="hero-text">
+                <h1>Phishing Detection &amp; Awareness Tool (Front-End Demo)</h1>
+                <p>
+                    This small website is designed for beginners who don’t know anything about phishing.
+                    User sirf yahan suspicious URL ya message paste karega, aur hum usko simple words
+                    mein batayenge ki yeh <strong>safe lag raha hai</strong> ya <strong>phishing jaisa lag raha hai</strong>.
+                </p>
+                <p class="note">
+                    <strong>Note:</strong> This is an educational front-end demo. It uses basic JavaScript rules,
+                    not a real machine learning model.
+                </p>
+            </div>
+        </section>
+
+        <!-- What is phishing section -->
+        <section id="what-is-phishing" class="card info-card">
+            <h2>What is Phishing? (Simple Explanation)</h2>
+            <p>
+                Phishing ek aisa online fraud hai jahan attacker aapko <strong>fake email, message ya website</strong>
+                bhejta hai jo asli bank, company, ya college jaisa dikhai deta hai. Unka main goal hota hai:
+            </p>
+            <ul>
+                <li>Password churaana (email, social media, bank, etc.)</li>
+                <li>OTP, credit card number, UPI PIN lena</li>
+                <li>Malicious link par click karwana</li>
+            </ul>
+            <p>
+                Usually phishing messages:
+            </p>
+            <ul>
+                <li>Bahut <strong>urgent tone</strong> mein hote hain – “your account will be blocked”, “verify now”</li>
+                <li>Strange ya unknown <strong>links</strong> hote hain</li>
+                <li>Spelling mistakes ya weird email address hota hai</li>
+            </ul>
+        </section>
+
+        <!-- Checker section -->
+        <section id="checker" class="card checker-card">
+            <div class="checker-left">
+                <h2>Phishing Detection Demo (Front-End)</h2>
+                <ol class="steps">
+                    <li>Step 1: User suspicious <strong>URL</strong> ya <strong>message/email text</strong> copy karega.</li>
+                    <li>Step 2: Is tool ke textbox mein paste karega.</li>
+                    <li>Step 3: <strong>“Check for Phishing”</strong> button press karega.</li>
+                    <li>Step 4: Front-end JavaScript kuch simple rules se text ko analyse karega.</li>
+                    <li>Step 5: User ko clear result milega – <em>High / Medium / Low risk</em> + reason.</li>
+                </ol>
+            </div>
+
+            <div class="checker-right">
+                <label for="userInput" class="field-label">
+                    Paste suspicious URL or message here:
+                </label>
+                <textarea id="userInput" rows="6"
+                          placeholder="Example: https://login-yourbank-security.com/verify or
+'Dear user, your account will be blocked. Click here to verify now.'"></textarea>
+
+                <button id="checkBtn" class="primary-btn">
+                    Check for Phishing
+                </button>
+
+                <div id="resultBox" class="result-box hidden">
+                    <!-- JS will inject result here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Tips section -->
+        <section id="tips" class="card tips-card">
+            <h2>Basic Safety Tips for Users</h2>
+            <ul>
+                <li>Always check if the website uses <strong>https://</strong>, not just http://</li>
+                <li>Never share OTP, PIN or full card number on links from unknown messages.</li>
+                <li>Official banks/colleges usually don’t ask passwords through email or SMS.</li>
+                <li>If a message feels too urgent or scary, <strong>double check</strong> from official app or website.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>
+            Front-end made using <strong>HTML + CSS + JavaScript</strong> for “Phishing Detection &amp; Prevention using AI” project.
+            Backend / ML model will connect to this interface via API in the full project.
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
